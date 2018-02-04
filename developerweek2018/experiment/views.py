@@ -11,7 +11,7 @@ def experiment():
     return render_template('experiments/show.html', id=1)
 
 @blueprint.route('/4')
-def experiment():
+def experiment4():
     """Show experiment."""
     return render_template('experiments/show.html', id=4)
 
