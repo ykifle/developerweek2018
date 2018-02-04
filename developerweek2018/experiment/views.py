@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """Project views."""
 from flask import Blueprint, render_template, redirect, session
+import os
+import shutil
 
 blueprint = Blueprint('experiment', __name__, url_prefix='/experiments', static_folder='../static')
 
@@ -18,5 +20,6 @@ def experiment4():
 @blueprint.route('/1/fork')
 def fork_experiment():
     """Show experiment."""
+    shutil.copytree('/red/notebook/experiment-1', '/red/notebook/experiment-4')
     session['forked'] = True
     return redirect('/experiments/4')
