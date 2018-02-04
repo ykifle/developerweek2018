@@ -8,12 +8,15 @@ blueprint = Blueprint('experiment', __name__, url_prefix='/experiments', static_
 @blueprint.route('/1')
 def experiment():
     """Show experiment."""
-    print "Session = " + str(session)
-    return render_template('experiments/show.html', forked=session.get('forked', False))
+    return render_template('experiments/show.html', id=1)
+
+@blueprint.route('/4')
+def experiment():
+    """Show experiment."""
+    return render_template('experiments/show.html', id=4)
 
 @blueprint.route('/1/fork')
 def fork_experiment():
     """Show experiment."""
     session['forked'] = True
-    print "Session = " + str(session)
-    return redirect('/experiments/1')
+    return redirect('/experiments/4')

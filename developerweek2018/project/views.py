@@ -17,5 +17,4 @@ def projects():
 @blueprint.route('/1')
 def project():
     """Show project."""
-    print "Session = " + str(session)
     return render_template('projects/show.html', forked=session.get('forked', False))
