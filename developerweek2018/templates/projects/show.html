@@ -1,24 +1,32 @@
 
 {% extends "layout.html" %}
+{% block body_class %}experiments{% endblock %}
 {% block content %}
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-12">
-      <div class="run row">
+      <div class="run">
         <div class="run-id col-1">1</div>
-        <a class="btn btn-default" href="/experiments/1" target="_blank">View &raquo;</a>
+        <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
+        <a class="btn btn-primary" href="/experiments/1">Fork</a>
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="col-12">
-      <div class="run row">
-        <div class="run-id col-1">1</div>
-        <a class="btn btn-default" href="http://192.168.0.15:6006" target="_blank">View &raquo;</a>
+      <div class="run">
+        <div class="run-id col-1">2</div>
+        <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
+        <a class="btn btn-primary" href="/experiments/1">Fork</a>
       </div>
    </div>
+  </div>
+  <div class="row">
     <div class="col-12">
-      <div class="run row">
-        <div class="run-id col-1">1</div>
-        <a class="btn btn-default" href="http://192.168.0.15:6006" target="_blank">View &raquo;</a>
+      <div class="run">
+        <div class="run-id col-1">3</div>
+        <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
+        <a class="btn btn-primary" href="/experiments/1">Fork</a>
       </div>
     </div>
   </div>

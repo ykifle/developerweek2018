@@ -1,22 +1,46 @@
 
 {% extends "layout.html" %}
+{% block body_class %}projects{% endblock %}
 {% block content %}
-<div class="body-content">
-  <div class="row">
-    <div class="col-lg-4">
-      <h2><i class="fa fa-flask"></i> Cat vs Dog</h2>
-      <p>Is it a cat or dog?</p>
-      <p><a class="btn btn-default" href="/experiments/1">View &raquo;</a></p>
+<div class="container">
+  <div class="row py-3">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa fa-flask"></i> Cat vs Dog</h5>
+          <p class="card-text">Is it a cat or dog?</p>
+          <a class="btn btn-primary" href="/projects/1">View &raquo;</a>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-4">
-      <h2><i class="fa fa-flask"></i> Hotdog vs Not Hotdog</h2>
-      <p>Is it a hotdog or not hotdog?</p>
-      <p><a class="btn btn-default" href="/experiments/1">View &raquo;</a></p>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa fa-flask"></i> Hotdog vs Not Hotdog</h5>
+          <p class="card-text">Is it a hotdog or not hotdog?</p>
+          <a class="btn btn-primary" href="/projects/1">View &raquo;</a>
+        </div>
+      </div>
    </div>
-    <div class="col-lg-4">
-      <h2><i class="fa fa-flask"></i> Buy or Sell Bitcoin</h2>
-      <p>Bitcoin quant trading model</p>
-      <p><a class="btn btn-default" href="/experiments/1">View &raquo;</a></p>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa fa-flask"></i> Buy or Sell Bitcoin</h5>
+          <p class="card-text">Bitcoin quant trading model</p>
+          <a class="btn btn-primary" href="/projects/1">View &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
+  <div class="row py-3">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa fa-flask"></i> Home Price Prediction</h5>
+          <p class="card-text">What will a home cost?</p>
+          <a class="btn btn-primary" href="/projects/1">View &raquo;</a>
+        </div>
+      </div>
     </div>
   </div><!-- /.row -->
 </div>
