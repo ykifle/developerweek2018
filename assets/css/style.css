@@ -66,4 +66,5 @@ footer .footer-nav {
 .experiments .run {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
