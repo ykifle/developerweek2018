@@ -10,3 +10,8 @@ blueprint = Blueprint('project', __name__, url_prefix='/projects', static_folder
 def projects():
     """List projects."""
     return render_template('projects/list.html')
+
+@blueprint.route('/1')
+def project():
+    """Show project."""
+    return render_template('projects/show.html')

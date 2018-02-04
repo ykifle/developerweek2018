@@ -2,7 +2,7 @@
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
 
-from developerweek2018 import commands, public, user, project
+from developerweek2018 import commands, public, user, project, experiment
 from developerweek2018.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, login_manager, migrate, webpack
 from developerweek2018.settings import ProdConfig
 
@@ -40,6 +40,7 @@ def register_blueprints(app):
     app.register_blueprint(public.views.blueprint)
     app.register_blueprint(user.views.blueprint)
     app.register_blueprint(project.views.blueprint)
+    app.register_blueprint(experiment.views.blueprint)
     return None
 
 

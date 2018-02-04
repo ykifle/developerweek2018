@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Data</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Code</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Results</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade results" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <iframe id="result-iframe" height="500px" class="w-100" src="/tb" frameborder="0"></iframe>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function getDocHeight(doc) {
+      doc = doc || document;
+      // stackoverflow.com/questions/1145850/
+      var body = doc.body, html = doc.documentElement;
+      var height = Math.max( body.scrollHeight, body.offsetHeight, 
+          html.clientHeight, html.scrollHeight, html.offsetHeight );
+      return height;
+  }
+  
+  function setIframeHeight(id) {
+      var ifrm = document.getElementById(id);
+      var doc = ifrm.contentDocument? ifrm.contentDocument: 
+          ifrm.contentWindow.document;
+      ifrm.style.visibility = 'hidden';
+      ifrm.style.height = "10px"; // reset to minimal height ...
+      // IE opt. for bing/msn needs a bit added or scrollbar appears
+      ifrm.style.height = getDocHeight( doc ) + 4 + "px";
+      ifrm.style.visibility = 'visible';
+  }
+  
+  // document.getElementById('result-iframe').onload = function() { // Adjust the Id accordingly
+  //     setIframeHeight(this.id);
+  // }
+
+  // $('#contact-tab').on('shown.bs.tab', function (e) {
+  //   $('#contact').html('<iframe id="result-iframe" height="500px" class="w-100 h-100" src="/tb" frameborder="0"></iframe>')
+  // })
+  </script>
+{% endblock %}
+

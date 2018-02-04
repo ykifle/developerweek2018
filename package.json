@@ -15,15 +15,18 @@
   },
   "author": "Yohannes Kifle",
   "license": "BSD-3-Clause",
-  "engines": { "node" : ">=4" },
+  "engines": {
+    "node": ">=4"
+  },
   "bugs": {
     "url": "https://github.com/ykifle/developerweek2018/issues"
   },
   "homepage": "https://github.com/ykifle/developerweek2018#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

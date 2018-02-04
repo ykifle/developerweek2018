@@ -84,3 +84,13 @@ footer .footer-nav {
   margin-right: 25px;
   list-style: none;
 }
+
+/* custom */
+
+.results {
+  min-height: 811px;
+}
+
+#result-iframe {
+  height: 811px;
+}
