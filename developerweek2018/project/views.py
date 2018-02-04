@@ -11,8 +11,8 @@ blueprint = Blueprint('project', __name__, url_prefix='/projects', static_folder
 @blueprint.route('/')
 def projects():
     """List projects."""
-    projects = os.listdir('workspace')
-    return render_template('projects/list.html', projects=projects)
+    # projects = os.listdir('workspace')
+    return render_template('projects/list.html')
 
 @blueprint.route('/1')
 def project():
