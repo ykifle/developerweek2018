@@ -68,3 +68,17 @@ footer .footer-nav {
   align-items: center;
   justify-content: space-between;
 }
+
+.navbar-brand img {
+  width: 72px;
+  height: 72px;
+}
+
+.home .jumbotron img {
+  width: 400px;
+  height: 400px;
+}
+
+.home .body-content {
+  padding: 0
+}
