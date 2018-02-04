@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
+from flask.ext.session import Session
 
 from developerweek2018 import commands, public, user, project, experiment
 from developerweek2018.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, login_manager, migrate, webpack
@@ -19,6 +20,9 @@ def create_app(config_object=ProdConfig):
     register_errorhandlers(app)
     register_shellcontext(app)
     register_commands(app)
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+    Session(app)
     return app
 
 

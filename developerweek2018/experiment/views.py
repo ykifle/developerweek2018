@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Project views."""
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, session
 
 blueprint = Blueprint('experiment', __name__, url_prefix='/experiments', static_folder='../static')
 
@@ -8,4 +8,12 @@ blueprint = Blueprint('experiment', __name__, url_prefix='/experiments', static_
 @blueprint.route('/1')
 def experiment():
     """Show experiment."""
-    return render_template('experiments/show.html')
+    print "Session = " + str(session)
+    return render_template('experiments/show.html', forked=session.get('forked', False))
+
+@blueprint.route('/1/fork')
+def fork_experiment():
+    """Show experiment."""
+    session['forked'] = True
+    print "Session = " + str(session)
+    return redirect('/experiments/1')

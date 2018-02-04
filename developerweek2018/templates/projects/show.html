@@ -11,7 +11,7 @@
         <span>Accuracy: 0.91</span>|<span>Last Run: 2018-01-24 13:44:12</span>
         <div class="actions">
           <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
-          <a class="btn btn-primary" href="/experiments/1">Fork</a>
+          <a class="btn btn-primary" href="/experiments/1/fork">Fork</a>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <span>Accuracy: 0.71</span>|<span>Last Run: 2018-01-30 13:44:12</span>
         <div class="actions">
           <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
-          <a class="btn btn-primary" href="/experiments/1">Fork</a>
+          <a class="btn btn-primary" href="/experiments/1/fork">Fork</a>
         </div>
       </div>
    </div>
@@ -35,11 +35,25 @@
         <span>Accuracy: 0.84</span>|<span>Last Run: 2018-02-02 13:44:12</span>
         <div class="actions">
           <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
-          <a class="btn btn-primary" href="/experiments/1">Fork</a>
+          <a class="btn btn-primary" href="/experiments/1/fork">Fork</a>
         </div>
       </div>
     </div>
   </div>
+  {% if forked %}
+  <div class="row">
+    <div class="col-12">
+      <div class="run">
+        <div class="run-id col-1">4</div>
+        <span>Forked from Experiment 1</span>|<span>Accuracy: 0.91</span>|<span>Last Run: 2018-01-24 13:44:12</span>
+        <div class="actions">
+          <a class="btn btn-primary mr-2" href="/experiments/1">View</a>
+          <a class="btn btn-primary" href="/experiments/1/fork">Fork</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
 </div>
 {% endblock %}
 

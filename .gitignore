@@ -21,6 +21,7 @@ lib64
 dev.db
 npm-debug.log
 tmp
+flask_session
 
 # Installer logs
 pip-log.txt
